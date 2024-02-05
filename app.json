@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "dicasviagem",
-    "slug": "dicasviagem",
+    "name": "react-travel-tips",
+    "slug": "react-travel-tips",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

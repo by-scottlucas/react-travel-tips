@@ -2,9 +2,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { ActivityIndicator, Alert, Keyboard, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, Alert, Image, Keyboard, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
-const statusBarHeight = StatusBar.currentHeight;
 const KEY_GPT = "********** SUA CHAVE AQUI **********"
 
 export default function App() {
@@ -62,11 +61,12 @@ export default function App() {
 
 
   return (
+
     <View style={styles.container}>
 
       <StatusBar barstyle="dark-content" translucent={true} backgroundColor='#F1F1F1' />
 
-      <Text style={styles.heading}>Dicas de Viagem</Text>
+      <Image source={require('./assets/logo-horizontal.png')} style={styles.logo} />
 
       <View style={styles.form}>
 
@@ -133,14 +133,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 20
   },
-  heading: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    paddingTop: Platform.OS === 'android' ? statusBarHeight : 54
+  logo:{
+    marginTop: 30,
+    width: '70%',
+    height: 55
   },
   form: {
     width: '90%',
-    borderRadius: 8,
+    borderRadius: 2,
     padding: 16,
     marginTop: 16,
     marginBottom: 8,
@@ -153,24 +153,25 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderRadius: 4,
+    borderRadius: 2,
     borderColor: '#94a3b8',
     padding: 8,
     fontSize: 16,
     marginBottom: 16,
   },
   days: {
-    backgroundColor: '#F1F1F1',
+    color: '#d11140'
   },
   button: {
-    backgroundColor: '#FF5656',
+    backgroundColor: '#003b67',
     width: '90%',
-    borderRadius: 4,
+    borderRadius: 2,
     flexDirection: 'row',
     padding: 14,
     justifyContent: 'center',
     alignItems: 'center',
     gap: 8,
+    marginTop: 10,
   },
   buttonText: {
     fontSize: 18,

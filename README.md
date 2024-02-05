@@ -1,4 +1,4 @@
-# React Native - Dicas de Viagem
+# React Native - Travel Tips
 
 Este projeto foi desenvolvido para fins de estudo sobre React Native e integração da API do ChatGPT em um projeto.
 
